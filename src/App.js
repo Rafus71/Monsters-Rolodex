@@ -10,32 +10,40 @@ class App extends Component {
     this.state = {
       monsters: [
          {
-          name: 'Linda'
+          name: 'Linda',
+          id: '1231e',
         },
          {
-          name: 'Frank'
+          name: 'Frank',
+          id: '63648e',
         },
          {
-          name: 'Jacky'
+          name: 'Jacky',
+          id: '638e80e',
         },
         {
-          name: 'Andrew'
+          name: 'Andrew',
+          id: '7993e9e44',
         },
         
-      ]
+      ],
       
       
-    }
+    };
   }
 
   render() {
     return (
       <div className="App">
-        {
-          this.state.monsters.map((monster) => {
-            return <h1>{monster.name}</h1>
-          })
-        }
+        
+        {this.state.monsters.map((monster) => {
+          return (
+            <div key={monster.id}>
+              <h1>{monster.name}</h1>
+            </div>
+          );
+        })}
+        
       </div>
     );
 
