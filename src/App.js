@@ -1,6 +1,5 @@
-import {Component} from 'react'
-
-import logo from './logo.svg';
+import { Component } from 'react'
+import CardList from './components/card-list/card-list.component';
 
 import './App.css';
 
@@ -59,13 +58,14 @@ class App extends Component {
     
         />
           
-        {filteredMonsters.map((monster) => {
-          return (
-            <div key={monster.id}>
+         {/*filteredMonsters.map((monster) => {
+           return (
+           <div key={monster.id}>
               <h1>{monster.name}</h1>
             </div>
           );
-        })}
+        })*/}
+        <CardList />
       </div>
     ); 
       
