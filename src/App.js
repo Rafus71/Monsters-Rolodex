@@ -11,7 +11,7 @@ class App extends Component {
       monsters: [],
       searchField: '',
     };
-    console.log('constructor');
+  
   }
 
   componentDidMount() {
@@ -23,9 +23,7 @@ class App extends Component {
           () => {
             return {monsters: users}
           },
-          () => { 
-            console.log(this.state);
-          }
+          
         )
       );
   }
@@ -39,7 +37,7 @@ class App extends Component {
   };
 
   render() {
-    console.log('render');
+    
 
     const { monsters, searchField } = this.state;
     const { onSearchChange } = this;
@@ -59,7 +57,7 @@ class App extends Component {
         />
           
          <CardList monsters={filteredMonsters} />
-        <CardList />
+      
       </div>
     ); 
       
